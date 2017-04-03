@@ -16,6 +16,18 @@
     </head>
     <body>
         <script>
+            //create the Board
+            var checkerBrd = document.createElement('canvas');
+            checkerBrd.width = checkerBrd.height = 640;
+            var context = checkerBrd.getContext('2d');
+            for (var i = 0; i < 8; i++) 
+
+                for (var j = 0; j < 8; j++) {
+                 context.fillStyle = (i + j) % 2 ? 'red' : 'Blue';
+                 context.fillRect(80 * i, 80 * j, 80, 80)
+                }
+            document.body.appendChild(checkerBrd);
+
             require('./index');
         </script>
     </body>
